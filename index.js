@@ -1,6 +1,8 @@
-const finalDate= (days)=>{
-    cost addDays= require("date-fns/addDays");
-    const result= addDays(new Date("22-08-2020", days));
-    return result;
-}
-export default finalDate
+const addDays = require("date-fns/addDays");
+
+const newDate = (days) => {
+  const result = addDays(new Date(2020, 7, 22), days);
+  return `${result.getDate()}-${result.getMonth() + 1}-${result.getFullYear()}`;
+};
+
+module.exports = newDate;
